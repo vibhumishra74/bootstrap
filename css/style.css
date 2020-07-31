@@ -1,0 +1,601 @@
+/* @import'./variable.css'; */
+@import"./variable.css";
+@import'./utility.css';
+
+body{
+    color: var(--pure);
+    background: var(--primary);
+}
+header{
+    /* background-color: var(--dark); */
+background-image:linear-gradient(135deg,rgba(0,0,0,1),rgba(0,0,0,.20)), url(../img/sunrise.jpg);
+height: 100vh;
+background-size: cover;
+}
+header nav{
+    padding: 20px 40px 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray)
+    
+}
+/* icon bar start */
+
+#iconbar{
+    color: var(--pure);
+    font-size: 2rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+}
+ #iconbar:hover{
+     color: lightcoral;
+ }
+ .visibility{
+     opacity: 1;
+     visibility: visible;
+     margin: 0 1rem;
+     text-decoration: none;
+     position: relative;
+     color: var(--pure);
+     width: 100%;
+     height: 80vh;
+     text-align: center;
+     justify-content: center;
+ }
+ 
+/* icon bar end */
+
+.nav-right{
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: space-between; 
+   
+    /* margin: 0 2rem; */
+    align-items: center;
+}
+.nav-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--pure);
+    position: relative;
+}
+header nav .nav-links a:after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    width: 0px;
+    height: 2px;
+    background-color: chocolate;
+    transition: ease-in-out;
+    transition: width .3s;
+}
+header nav .nav-links a:hover:after{
+    width: 80%;
+}
+.nav-links a:hover,.search input:hover{
+    color: var(--mild);
+}
+.search input{
+    width: 80px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+}
+.search{
+    background: transparent;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 50px;
+    
+    /* background-color: var(--dark); */
+}
+.search:hover{
+    color: white;
+}
+
+
+/* right social media start */
+.social div{
+    
+    border: 2px solid var(--pure);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-bottom: 30px;
+   opacity: 0;
+   /* animation: move 2s ease-in-out forwards  ; */
+}
+
+.social div a i{
+  
+   color: white;
+}
+.social div:hover{
+    background-color: var(--mild);
+    transform: translateY(-10px);
+    transition: ease-in-out .3s;
+}
+.social div a:hover{
+    color: var(--dark)
+}
+.social{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: 1px solid var(--gray);
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 80vh;
+
+}
+.hero{
+    position: relative;
+}
+/* right social media animation start */
+ 
+@keyframes move{
+    from{
+transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0px);
+opacity: 1;    }
+}
+
+/* right scial media end */
+.hero .cta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    min-height: calc(100vh-80px);
+}
+.hero .cta h1{
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--pure);
+    line-height: 1.7rem;
+    margin-bottom: 35px;
+}
+.hero .cta > div{
+    flex: 1;
+}
+
+.hero .cta .left-section{
+    padding: 0 60px 0 10%;
+}
+
+.hero .cta .right-section img{
+    height: 70vh;
+    width: 90%;
+    transform: rotate(15deg);
+    animation: astro 10s ease-in-out infinite;
+}
+
+
+
+
+/* astronaut animation start */
+
+@keyframes astro{
+  50%{
+      transform: translateY(50px) rotate(-30deg) scale(.4);
+  }
+   
+}
+
+
+/* astronaut animation end */
+/* join now section */
+section.strip{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--dark);
+    padding: 40px 0;
+}
+ .strip h3{
+     color: var(--pure);
+ }
+/* join now section end */
+
+
+
+/* rocket-section start */
+
+section.rocket{
+   /* display: flex;
+   justify-content: space-between;
+   align-items: initial; */
+    color: var(--pure); 
+     display: grid;
+    grid-template-columns: auto 100px auto;
+    grid-gap: 80px;
+    /* padding: 50px 0;  */
+}
+
+ section .rocket-body{
+     
+      /* padding: 80px 80px; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 150px;
+  }
+  section .rocket-body span{
+      font-size: 0px;
+      position: relative;
+  }
+  section .rocket-body span img{
+      width: 100%;
+      height: 100%;
+      /* display: block; */
+  }
+
+  .rocket .left-block{
+      padding: 80px 0px;
+  }
+  .rocket .right-block{
+      padding: 80px 0px;
+  }
+  section.rocket .block {
+    max-width: 70%;
+}
+section.rocket .block h1{
+    font-size: 32px;
+    font-weight: 500;
+    
+}
+ .underline{
+    position: relative;
+    margin-bottom: 38px;
+   
+    
+ }
+ section.rocket .underline:before{
+     content: "";
+     position: absolute;
+     display: block;
+     left: 0px;
+     bottom: -12px;
+     height: 2px;
+     width: 38%;
+     background-color: var(--pure);
+ }
+ section.rocket h1.underline:before{
+     width: 19%;
+ }
+ section.rocket p {
+    line-height: 1.4rem;
+}
+section.rocket .block h2{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+section.rocket .payload{
+    padding-top: 85px;
+}
+section.rocket .payload h2{
+    padding-left: 80px;
+}
+ .dragon{
+     margin-top: 50px;
+ }
+ section.rocke .block button{
+     margin-top: 30px;
+ }
+  .engine{
+      display: flex;
+      margin-top: 30px;
+      align-items: center;
+      font-weight: 500;
+     
+  }
+   .burn{
+       margin-left: 30px;
+   }
+    .engine div h1{
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+     .burn h1 span{
+         font-size: 16px;
+         font-weight: 500;
+     }
+     .rocket .left-block .seaa{
+          margin-top: 20px;
+      }
+      .rocket .right-block .seaa{
+        margin-top: 20px;
+    }
+    .block.engines{
+        padding-top: 80px;
+        display: flex;
+        justify-content: center;
+    }
+   .block.engines img{
+       width: 180px;
+   }
+  .block.marine{
+      padding-top: 100px;
+      width: 70%;
+  }
+  .block.marine h2{
+      font-size: 14px;
+      padding-left: 100px;
+      margin-bottom: 26px;
+  }
+/* rocket-section end */
+
+/* bus pic */
+
+ .graphics{
+     position: sticky;
+     float: right;
+     top: 60px;
+     margin-right: -50px;
+ }
+  .graphics img{
+    
+      height: 350px;
+  }
+/* bus pic end*/
+
+/* rocket animation start */
+
+ .rocket-body span:after,.rocket-body span:nth-child(3):before{
+content: "";
+display: block;
+position: absolute;
+height: 2px;
+background: var(--pure);
+width: 0px;
+transition: width 1s ease-in-out ;
+ }
+ .rocket-body span:nth-child(1):after{
+bottom: 16px;
+left: 96%;
+ }
+ .rocket-body span:nth-child(2):after{
+     bottom: 70%;
+     right: 90%;
+ }
+ .rocket-body span:nth-child(3):after{
+     bottom: 58%;
+     right: 88%;
+ }
+ .rocket-body span:nth-child(3):before{
+     bottom: 43%;
+     left: 90%;
+ }
+ .rocket-body span.active:nth-child(1):after{
+     width: 120px;
+ }
+ .rocket-body span.active:nth-child(2):after{
+     width: 180px;
+ }
+ .rocket-body span.active:nth-child(3):after{
+     width: 200px;
+ }
+ .rocket-body span.active:nth-child(3):before{
+     width: 180px;
+ }
+
+/* rocket animation end */
+
+
+/* rocket top move animatopn start */
+
+.rocket-body span.active:nth-child(1){
+    animation: jump 1s ease-in-out;
+}
+ @keyframes jump{
+     50%{
+         transform: translateY(-50px);
+     }
+ }
+/* rocket top move animatopn end */
+
+/* footer start */
+footer {
+    background: var(--dark);
+    padding: 60px 0;
+}
+
+footer > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+ }
+
+ footer .copyright span {
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+footer .copyright img {
+    height: 30px;
+}
+
+footer h1 {
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+footer h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--pure);
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li:nth-child(even) {
+    margin: 10px 0;
+ }
+
+ footer ul li a {
+    color: var(--mild);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all .3s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: var(--pure);
+ }
+
+ footer .footer-socials a {
+    margin-right: 20px;
+    font-size: 22px;
+    color: var(--mild);
+}
+
+footer .footer-socials a:hover {
+    color: var(--pure);
+}
+
+ .footer-socials{
+     display: flex;
+     display: inline-block;
+     justify-content: center;
+     align-items: center;
+ }
+/* footer end */
+
+
+
+/* media query start */
+
+/* laptop desktop */
+
+@media(min-width:1200px){
+
+}
+
+
+
+/* tablet low resolution */
+@media(max-width:990px){
+  
+.brand{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+ .nav-right{
+     width: 100%;
+ }
+
+ .nav-right .nav-links a,.search {
+     opacity: 0;
+    visibility: hidden;
+ } 
+  #iconbar{
+      visibility: visible;
+      opacity: 1;
+  }
+ 
+  .nav-right .visibility a {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    background-color: var(--dark);
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    z-index: 1;
+} 
+.nav-right .visibility a:hover{
+    color: lightcoral;
+    background: transparent;
+    
+}
+header nav {
+    padding: 20px 40px 20px 100px;
+    display: list-item;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray);
+}
+ .right-section img{
+     height: 200px;
+     width: 100px;
+ }
+ .graphics {
+    position: sticky;
+    float: right;
+    top: 60px;
+    margin-right: -40px;
+}
+ 
+}
+
+/* tablet big screen */
+
+@media(max-width:800px){
+    .cta .left-section {
+        font-size: 59px;
+        margin-left: -55px;
+    }
+    .cta .left-section h1 {
+        font-weight: 400;
+        font-size: 13px;
+        /* margin-left: -55px; */
+    }
+ .social {
+    width: 6%;
+    height: 0px;
+    margin-bottom: 16px;
+}
+.right-section img src {
+    height: 200px;
+    width: 100px;
+}
+.strip h3 {
+    margin-top: 40px;
+
+}
+
+
+/* smartphone android */
+
+@media(max-width:600px){
+
+}
+
+/* phone low resolution */
+
+@media(max-width:480px){
+
+}
+
+
+
+
+
+/* media query end */
